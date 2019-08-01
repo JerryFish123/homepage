@@ -1,7 +1,7 @@
 
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch, Redirect, Router } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import KnowAli from "./pages/KnowAli";
 import Log from "./pages/Log";
@@ -9,12 +9,11 @@ import PersonalCenter from "./pages/PersonalCenter";
 import Register from "./pages/Register";
 import SchoolRecruitment from "./pages/SchoolRecruitment";
 import SocialRecruitment from "./pages/SocialRecruitment";
-console.log("test")
 const PrimaryLayout = () =>
     <div className="primary-layout">
         <ul className='main-ul'>
             <li>
-                <Link to="/">首页</Link>
+                <Link to="/homepage">首页</Link>
             </li>
             <li>
                 <Link to="/KnowAli">社会招聘</Link>
@@ -35,19 +34,19 @@ const PrimaryLayout = () =>
                 <Link to="/SocialRecruitment">社会招聘</Link>
             </li>
         </ul>
-        <Switch>
-            <Route path="/" exact component={HomePage} />
+        <main>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/homepage" component={HomePage} />
             <Route path="/KnowAli" component={KnowAli} />
             <Route path="/Log" component={Log} />
             <Route path="/PersonalCenter" component={PersonalCenter} />
             <Route path="/Register" component={Register} />
             <Route path="/SchoolRecruitment" component={SchoolRecruitment} />
             <Route path="/SocialRecruitment" component={SocialRecruitment} />
-        </Switch>
+        </main>
     </div>
 
 
-const UsersPage = () => <h1>User Page</h1>;
 
 const App = () =>
     <BrowserRouter>
