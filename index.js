@@ -1,7 +1,7 @@
 
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter, Route, Link, Switch, Redirect, Router } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch, Redirect, Router, IndexRoute } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import KnowAli from "./pages/KnowAli";
 import Log from "./pages/Log";
@@ -35,6 +35,7 @@ const PrimaryLayout = () =>
             </li>
         </ul>
         <main>
+            <IndexRoute component={HomePage} />
             <Route path="/" component={HomePage} />
             <Route path="/homepage" component={HomePage} />
             <Route path="/KnowAli" component={KnowAli} />
