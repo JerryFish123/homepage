@@ -9,6 +9,7 @@ import PersonalCenter from "./pages/PersonalCenter";
 import Register from "./pages/Register";
 import SchoolRecruitment from "./pages/SchoolRecruitment";
 import SocialRecruitment from "./pages/SocialRecruitment";
+console.log("test")
 const PrimaryLayout = () =>
     <div className="primary-layout">
         <ul className='main-ul'>
