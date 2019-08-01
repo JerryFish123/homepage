@@ -14,7 +14,7 @@ const PrimaryLayout = () =>
     <div className="primary-layout">
         <ul className='main-ul'>
             <li>
-                <Link to="/">首页</Link>
+                <Link exact to="/">首页</Link>
             </li>
             <li>
                 <Link to="/KnowAli">社会招聘</Link>
