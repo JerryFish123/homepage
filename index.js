@@ -1,7 +1,7 @@
 
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import KnowAli from "./pages/KnowAli";
 import Log from "./pages/Log";
@@ -14,7 +14,7 @@ const PrimaryLayout = () =>
     <div className="primary-layout">
         <ul className='main-ul'>
             <li>
-                <Link exact to="/">首页</Link>
+                <Link to="/">首页</Link>
             </li>
             <li>
                 <Link to="/KnowAli">社会招聘</Link>
@@ -35,7 +35,7 @@ const PrimaryLayout = () =>
                 <Link to="/SocialRecruitment">社会招聘</Link>
             </li>
         </ul>
-        <main>
+        <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/KnowAli" component={KnowAli} />
             <Route path="/Log" component={Log} />
@@ -43,7 +43,7 @@ const PrimaryLayout = () =>
             <Route path="/Register" component={Register} />
             <Route path="/SchoolRecruitment" component={SchoolRecruitment} />
             <Route path="/SocialRecruitment" component={SocialRecruitment} />
-        </main>
+        </Switch>
     </div>
 
 
