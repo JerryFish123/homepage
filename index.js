@@ -9,31 +9,29 @@ import PersonalCenter from "./pages/PersonalCenter";
 import Register from "./pages/Register";
 import SchoolRecruitment from "./pages/SchoolRecruitment";
 import SocialRecruitment from "./pages/SocialRecruitment";
-// require('./index.css');
-// import "./index.css"
 const PrimaryLayout = () =>
     <div className="primary-layout">
-        <ul>
+        <ul className='main-ul'>
             <li>
-                <Link to="/">Home</Link>
+                <Link to="/">首页</Link>
             </li>
             <li>
-                <Link to="/KnowAli">KnowAli</Link>
+                <Link to="/KnowAli">社会招聘</Link>
             </li>
             <li>
-                <Link to="/Log">Log</Link>
+                <Link to="/Log">登录</Link>
             </li>
             <li>
-                <Link to="/PersonalCenter">PersonalCenter</Link>
+                <Link to="/PersonalCenter">个人中心</Link>
             </li>
             <li>
-                <Link to="/Register">Register</Link>
+                <Link to="/Register">注册</Link>
             </li>
             <li>
-                <Link to="/SchoolRecruitment">SchoolRecruitment</Link>
+                <Link to="/SchoolRecruitment">校园招聘</Link>
             </li>
             <li>
-                <Link to="/SocialRecruitment">SocialRecruitment</Link>
+                <Link to="/SocialRecruitment">社会招聘</Link>
             </li>
         </ul>
         <main>
