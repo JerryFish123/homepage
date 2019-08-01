@@ -35,8 +35,8 @@ const PrimaryLayout = () =>
             </li>
         </ul>
         <main>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/homepage" component={HomePage} />
+            <Route path="/" component={HomePage} />
+            <Route path="/homepage" component={HomePage} />
             <Route path="/KnowAli" component={KnowAli} />
             <Route path="/Log" component={Log} />
             <Route path="/PersonalCenter" component={PersonalCenter} />
